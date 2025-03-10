@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="shortcut icon" href="D:\ML PROJECT 01\FRONT END\templates\icon_bumpsafe-remove.png" type="image/x-icon">
+  <link rel="shortcut icon" href="static/img.png" type="image/x-icon">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BumpSafe Vision</title>
   <style>
-    body{
+    __body{
       height: 100%;
       width: 100%;
-      background-image: url("FLASK\assets\bg_bsv.png");
-      background-size: cover;
+      <!-- background-image: url("static/bg_bsv.png"); -->
+      background-image: linear-gradient(to right, #99C4CA, #E7ACB7);
+      <!-- background-size: cover; -->
+    }
+    body{
+      background-image: linear-gradient(to right, #99C4CA, #E7ACB7);
+      margin: 0;
+      padding: 0;
+      margin-top: 0;
     }
     
     .header{
       display: flex;
+      background-image: linear-gradient(to right, #99C4CA, #E7ACB7);
     }
    
     .navig{
@@ -38,7 +46,7 @@
     }
     .nav_button{
       border-radius: 50px;
-      color;
+      box-shadow: 5px 5px 30px rgb(255, 111, 0);
       
     }
     .nav__{
@@ -47,7 +55,8 @@
       margin-left: 0px;
       margin-inline-start: 110%;
       background-color: black;
-      color: white;
+      color: rgb(255, 111, 0);
+      box-shadow: 5px 5px 40px rgb(255, 111, 0);
       
     }
     .nav_center {
@@ -60,6 +69,7 @@
         padding: 0;
         display: flex;
         justify-items: right;
+        margin-top: 5px;
     }
     
     .listitem {
@@ -67,7 +77,7 @@
       float: left;
     }
     .listitems{
-      color: white;
+      color: rgb(255, 111, 0);
     }
     
     .aa {
@@ -86,7 +96,7 @@
       padding: 18px;
       
       background-color: none;
-      color: white;
+      color: rgb(255, 111, 0);
       display: inline;
       float: left;
       text-decoration: none;
@@ -109,24 +119,39 @@
       animation: 
         typing 3.5s steps(40, end),
         blink-caret .75s step-end infinite;
+      
+      
+    }
+    .hero{
+      background-image: url('static/bg_bsv.png'); /* Replace with your image path */
+      background-size: cover; /* Cover the entire section */
+      <!-- background-position: center; /* Center the image */ -->
+      background-repeat: no-repeat; /* Prevent image repetition */
+      width: 100%;
+      height: 100%;
+      background-attachment: fixed;
+      padding-right: 0%;
+      
     }
     
     /* The typing effect */
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-    }
+    <!-- @keyframes typing { -->
+      <!-- from { width: 0 } -->
+      <!-- to { width: 100% } -->
+    <!-- } -->
     
     /* The typewriter cursor effect */
-    @keyframes blink-caret {
-      from, to { border-color: transparent }
-      50% { border-color: none; }
-    }
-   .sub_cont{
-    border: 2px solid ;
-    background-color: white;
-    opacity: 60%;
-    border-color: black;
+    <!-- @keyframes blink-caret { -->
+      <!-- from, to { border-color: transparent } -->
+      <!-- 50% { border-color: none; } -->
+    <!-- }  -->
+
+
+    .sub_cont{
+    border: 2px solid rgb(255, 111, 0) ;
+    background-color:   rgba(255, 255, 255, 0.6);
+    box-shadow: 5px 5px 40px rgb(255, 111, 0);
+
     border-radius: 50px;
     width: 50vw;
     height: 6vw;
@@ -138,6 +163,177 @@
     text-decoration:;
    }
 
+ /*this is for the heading animation in the hero section*/
+ @keyframes fadeInUp {
+  from {
+      transform: translate3d(0,40px,0)
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+      transform: translate3d(0,40px,0)
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+  opacity: 0
+}
+
+.fadeInUp {
+  opacity: 0;
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
+}   
+/*end of heading animation*/
+/* start of nav bar animation left*/
+
+@keyframes fadeInLeft {
+            from {
+                transform: translate3d(-150px,0,0)
+            }
+        
+            to {
+                transform: translate3d(0,0,0);
+                opacity: 1
+            }
+        }
+        
+        @-webkit-keyframes fadeInLeft {
+            from {
+                transform: translate3d(-150px,0,0)
+            }
+        
+            to {
+                transform: translate3d(0,0,0);
+                opacity: 1
+            }
+        }
+        
+        .animated {
+            animation-duration: 1s;
+            animation-fill-mode: both;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-fill-mode: both
+        }
+        
+        .animatedFadeInLeft {
+            opacity: 0
+        }
+        
+        .fadeInLeft {
+            opacity: 0;
+            animation-name: fadeInLeft;
+            -webkit-animation-name: fadeInLeft;
+        }   
+
+/* this is end of nav bar animation left*/
+
+
+
+
+/* this is for fade up to down animation*/
+
+@keyframes fadeInDown {
+  from {
+      transform: translate3d(0,-100px,0)
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}
+
+@-webkit-keyframes fadeInDown {
+  from {
+      transform: translate3d(0,-100px,0)
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInDown {
+  opacity: 0
+}
+
+.fadeInDown {
+  opacity: 0;
+  animation-name: fadeInDown;
+  -webkit-animation-name: fadeInDown;
+}
+
+/* this is end of fade up to down animation*/
+
+/*this is start of fade in left to right animation*/
+
+@keyframes fadeInRight {
+  from {
+      transform: translate3d(150px,0,0)
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}
+
+@-webkit-keyframes fadeInRight {
+  from {
+      transform: translate3d(150px,0,0)
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInRight {
+  opacity: 0
+}
+
+.fadeInRight {
+  opacity: 0;
+  animation-name: fadeInRight;
+  -webkit-animation-name: fadeInRight;
+}
+/*this is end of fade in left to right animation*/
+
   </style>
   
 </head>
@@ -145,16 +341,19 @@
   <div class="header">
     <!--this is for the nav bar section-->
     <a href="/home">
-      <img src="static/img.png" alt="", height="70px", width="70px">
+      <img src="static/img.png" alt="BSV", height="90px", width="80px", margin-top="10px", paddomg-top="10px">
     </a>
-    <h1 style="padding-left: 20px; font-family: Georgia, serif;">BumpSafe Vision</h1>
+    <div class="animated animatedFadeInLeft fadeInLeft">
+    <h1 style="padding-left: 20px; font-family: Georgia, serif;"><b style="color: rgb(255, 111, 0);font-size:40px;">B</b>ump<b style="color: rgb(255, 111, 0);font-size:40px;">S</b>afe <b style="color: rgb(255, 111, 0);font-size:40px;">V</b>ision</h1></div>
     <div class="navig">
     <nav class="navig_box">
       <ul class="nav_center">
-        <button class="nav_button"><li class="listitem" style="background-color: #C1ABBF; border-radius:50px;  border-left-width: .5vw;
+      <div class="animated animatedFadeInDown fadeInDown">
+        <button class="nav_button"><li class="listitem" style="background-color:  rgb(255, 111, 0); border-radius:50px;  border-left-width: .5vw;
       border-right-width: .5vw;"><a class="aa" href="default.asp"><b><u>Home</u></b></a></li></button>
         <button class="nav_button"><li class="listitem"><a class="aa" href="news.asp">Services</a></li></button>
         <button class="nav_button"><li class="listitem"><a class="aa" href="contact.asp">About</a></li></button>
+      </div>
         <!-- <button class="nav_button"><li class="listitem"><a class="aa" href="about.asp">About</a></li></button> -->
       </ul>
     </nav>
@@ -168,21 +367,34 @@
       <a href="/python/">Python</a>
     </nav> -->
     </div>
+    
     <div class="log-sign">
+      <div class="animated animatedFadeInRight fadeInRight">
       <ul class="nav_right">
         <button class="nav__"><li class="listitems"><a class="ab" href="/login">Login</a></li></button>
         <button class="nav__" style="margin-left: 5%;"><li class="listitems"><a class="ab" href="/signup">SignUp</a></li></button>
-      </ul>
+      </ul></div>
     </div>
-  </div><hr>
+  </div><hr style=" height:3px; background-color:black; margin:0;">
+
   <!-- <img src="D:\ML PROJECT 01\FRONT END\templates\gpt bg igm.png" alt=""> -->
+  <section class="hero">
   <div class="hero_sec">
-    <h1 class="main_head" ">SpeedBump Detction <br> <div class="q">Using AI</div></h1>
-   
+    <div class="animated animatedFadeInUp fadeInUp">
+    <h1 class="main_head">SpeedBump Detction <br>Using <font style=" color: rgb(255, 111, 0); font-size:100px; text-shadow: 1px 1px 30px rgb(255, 111, 0); ">AI</font> </div>
+   <font style="fon"></font>
   </div><br><br><br>
+  <div class="animated animatedFadeInUp fadeInUp">
   <div class="sub_cont">
-  <center><p style="color:rgb(255, 111, 0);">Experience the future of road safety with our revolutionary ML model.<br> detect road bumps and enhance navigation software with ease</p>
-  </center>
-  </div>
+  <center><p style="color: rgb(255, 111, 0);">Experience the future of road safety with our revolutionary ML model.<br> detect road bumps and enhance navigation software with ease</p>
+  </center></div>
+  </div><br><br><br>
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+   Ab laborum ut eius dicta tenetur est enim necessitatibus sequi ipsam ipsum totam dolorem dolorum vero repel
+   lendus libero, iure tempore eligendi deserunt numquam doloremque obcaecati ratione dolore! Maxime, corporis quo facere optio sapiente eius hic provident officia impedit eaque illo. Laborum, similique. Quibusdam atque sed cumque eaque sit! Iure esse labore beatae, corrupti alias impedit accusamus eum tempora voluptatem perspiciatis est delectus quos aliquid fuga nihil possimus nobis ipsum quod, incidunt maiores? Commodi similique consequatur tempora et maxime animi, molestias iusto aliquid ut. Optio vitae sit tenetur, quae neque sunt similique atque, vel, explicabo veniam amet iure dolore? Dolor quisquam cum repellendus harum amet ratione corporis vero veniam id delectus quidem quod, perspiciatis fugit in natus? Aliquid iste ipsum est, exercitationem laboriosam voluptatibus maiores ad recusandae accusamus voluptates necessitatibus numquam dicta repellendus ratione ab impedit fugit quas inventore quaerat! Consectetur assumenda natus molestias a, dicta repellendus enim commodi officia laboriosam ipsam, mollitia libero? Animi, illum dolores unde nemo velit expedita inventore, aliquam maxime dolore nobis dicta labore aliquid libero praesentium minus eveniet quos nesciunt sint enim excepturi. Modi nemo, sequi saepe nesciunt accusantium animi suscipit molestiae vero, quisquam, sapiente labore quod quo magnam. Maxime consectetur expedita, ipsa, dignissimos voluptatum natus nihil numquam deleniti animi suscipit deserunt odit, doloremque sed tempora pariatur quam id delectus ratione reprehenderit? Nam magni excepturi, praesentium ipsam facilis quaerat fuga aliquam quam fugit illum minima inventore doloribus ratione doloremque incidunt laudantium sit nemo, dolorem neque vel impedit ipsa tempore. Facere quos, sapiente totam quae sit natus, vero asperiores possimus nesciunt dignissimos provident voluptatem! Tenetur nisi dicta dignissimos beatae assumenda nostrum officia amet magnam mollitia ex laborum, dolores aperiam provident eligendi nam corrupti ea! In similique fugit non. Facilis necessitatibus excepturi delectus molestias optio veritatis sequi dignissimos tempore, ut dolorum vel quibusdam ab voluptatem culpa maxime doloremque dolore laborum illum accusamus voluptas eveniet quisquam vitae nisi beatae. Sunt sapiente quas harum mollitia assumenda atque quidem magni velit inventore. Et eum similique reprehenderit culpa animi obcaecati aspernatur illum quo. Sed molestiae, optio soluta laudantium pariatur nostrum. Maiores quis, dolorum saepe quos qui aspernatur sunt possimus in odit explicabo sapiente voluptas quod ab dicta quia adipisci ex non! Dolores deserunt suscipit, quasi non autem eius alias veritatis accusamus repellat distinctio impedit quisquam unde nemo laboriosam tempore maiores. Ex debitis, quibusdam non natus tempore inventore libero consequuntur nihil suscipit, cum officiis id porro. Error laborum voluptatibus porro quod saepe quaerat eos, nulla in sit deserunt similique alias reiciendis rem aliquam recusandae a mollitia, odio quasi debitis, perferendis voluptatum aliquid hic. Ut animi dicta debitis doloribus, recusandae id quia ea. Consequatur magnam quis eos error, alias praesentium. Ipsum soluta fuga ut, consectetur sunt at quaerat! Deleniti accusamus illo velit iure aut corrupti accusantium dolor, quae et atque eum dolores maiores aspernatur veritatis nostrum ex facilis fugit nesciunt nulla ducimus cumque? Iste, repudiandae provident sapiente aliquam aut exercitationem nulla optio eius pariatur ut tenetur nobis atque perspiciatis explicabo sunt laudantium, porro, sequi voluptatum temporibus! Placeat doloribus iste sequi nam rem a mollitia voluptas non officiis libero provident esse quos laborum nostrum illo porro eum consequatur, ullam enim commodi repudiandae natus aut? Eligendi placeat rem nihil assumenda officiis adipisci qui, sint fugit sed iure accusamus quidem itaque modi est temporibus voluptates debitis corrupti a vitae ab. Quas esse maxime veritatis architecto minus praesentium ullam repudiandae voluptas, itaque adipisci iusto consequatur voluptatem deserunt, ea possimus sapiente dignissimos eius eveniet corporis reprehenderit blanditiis, tempore maiores ratione? Nobis libero reiciendis amet illo omnis qui, provident laborum laudantium accusamus nemo consequatur exercitationem alias, architecto hic praesentium. Dolorem voluptatibus sunt, iure aliquid minus cum neque? Accusantium nobis voluptatem beatae perspiciatis quaerat assumenda nulla, culpa rerum quos, similique, optio facilis cum? Voluptatum, eius laudantium! Quibusdam quis aliquam veniam itaque labore eligendi? Earum nostrum voluptatem tenetur? Necessitatibus quidem quod doloremque dolor nam, repellendus rem reiciendis et temporibus quos distinctio maxime debitis modi ut repellat earum! Provident ullam obcaecati deleniti quibusdam aliquid minima deserunt aspernatur, qui consequuntur optio neque tempore perferendis earum delectus quam cupiditate illum soluta! Nihil pariatur corporis rerum blanditiis, eveniet expedita ea fugiat nesciunt deserunt, inventore velit numquam sint repellat ex hic? Aliquid quam fuga sapiente hic? Perferendis dolores quisquam sit amet iure aliquam, itaque quo, tempora veniam cum dignissimos. Accusantium dolor laudantium voluptate accusamus quibusdam amet est minus sapiente possimus pariatur, vero necessitatibus quia nemo ipsa officiis? Eveniet voluptate officiis corporis aut assumenda! Rerum vero debitis pariatur! Nihil ex rerum sunt dolorum minus laborum ducimus. Dicta sint impedit iure quo! Fuga ducimus facilis, repellat labore repellendus modi, vero maxime, impedit repudiandae quaerat placeat explicabo similique quis ipsum reiciendis debitis ut. Qui nulla iure id autem ullam eum natus repudiandae, animi repellat ex, impedit porro atque odio deleniti aspernatur odit voluptas error perspiciatis asperiores ut? Quos, aperiam nisi quidem enim delectus fuga nihil consectetur hic provident? Dolorem corrupti provident labore dicta, quam harum accusamus ea? Animi, atque quaerat. Voluptas eius nesciunt amet esse hic nam aperiam doloribus temporibus dolores. Rerum, dolores harum? Illo, doloremque ipsum unde nulla illum nihil! Quod quae maiores, vitae ipsa ratione suscipit quidem quis saepe vel eaque tempore! Cupiditate excepturi quasi ex sequi eos nihil, recusandae vitae, tenetur quis ad voluptas non. Tempora mollitia blanditiis molestias sed! Velit, voluptate unde, aliquam ad quaerat id quam iste laboriosam voluptates porro tenetur quos earum facere omnis esse consectetur suscipit exercitationem fugit placeat nostrum inventore sequi rerum! Rem harum illum necessitatibus ex, reiciendis ad labore minima ducimus soluta tenetur, laboriosam autem corrupti, exercitationem iste fugiat illo praesentium? Cupiditate cumque ipsa dolor totam, dicta fuga, accusamus commodi consequatur eligendi sunt ducimus! Asperiores quibusdam suscipit, doloremque sint velit commodi eius qui incidunt ratione dolorum nulla impedit magni corporis esse ad, non magnam nisi nesciunt nihil ullam ex nobis. Magnam consectetur libero omnis quia laudantium commodi dolorum corrupti exercitationem, perferendis ullam cum aut, eveniet illo possimus quod sapiente accusantium nemo sed assumenda. Veniam officia unde praesentium expedita quam incidunt labore autem minus error? Nobis eveniet consequatur fugit a, sunt molestiae culpa esse!
+
+</p>
+  </section>
+<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum nobis atque quibusdam pariatur numquam ex dolore officia repudiandae autem. Ad hic alias, obcaecati voluptatibus minus consectetur tempore dolorum, aliquid ea ullam quam quo culpa id blanditiis ut commodi ab amet quisquam quidem iusto magni, laborum quas non nihil! Officiis ad porro doloremque nihil, ipsa aliquid ratione eos commodi! Veniam, perferendis laudantium a iste in distinctio hic ea odio libero sapiente quasi suscipit, repellat impedit perspiciatis numquam debitis est aspernatur commodi quisquam. Atque ducimus distinctio omnis totam sed, et natus dolorem enim vel voluptate accusamus dolor aspernatur blanditiis! Beatae alias voluptate deserunt et consequatur inventore distinctio dicta quaerat voluptatum architecto reiciendis perferendis delectus exercitationem, omnis corporis quae eum reprehenderit soluta quos repellendus vitae asperiores sint ipsa? Minus nesciunt repellat asperiores doloremque autem ab nobis possimus aliquam magnam dolore. Quo corporis neque ipsam. Laudantium repellat illo assumenda rem esse debitis saepe placeat! Labore voluptatem nostrum eum, id ipsum numquam dolorum sint nulla pariatur repellat fugit qui, praesentium, itaque porro similique accusamus beatae a unde ipsam quasi rerum. Similique nesciunt voluptatem corporis unde velit quos accusantium vitae provident quas, tempore error quidem eveniet doloribus. Unde, suscipit deserunt repudiandae excepturi, adipisci praesentium architecto qui beatae, dolorem placeat ex? Magni accusamus, dolorum hic eos saepe aspernatur voluptatem incidunt provident expedita pariatur suscipit repellendus tempora ex quo illum labore minus est dignissimos autem omnis sapiente dicta soluta. Saepe voluptatum, accusamus explicabo numquam iusto dolorem atque consectetur aperiam rem, praesentium incidunt corporis totam magnam possimus perferendis consequuntur error enim libero! Magnam, omnis esse nulla non ipsam, natus, deleniti repudiandae repellendus at mollitia temporibus id eius officia odio quo quos ab a! Facere at earum, quia quaerat non voluptates perferendis excepturi harum ratione tenetur veritatis incidunt? Ea quidem quas temporibus nostrum ex at dolores minima rem harum consequatur sint molestiae, incidunt delectus debitis labore, sed facilis dolor eligendi. Praesentium qui dignissimos dolores cum nam velit voluptate. Labore nulla minima reiciendis, itaque fugiat maxime consectetur dolorem asperiores voluptatibus, magni numquam? Mollitia corporis ad hic inventore omnis quod temporibus minus quis, ut labore sapiente nobis dolor iure voluptatibus eum aut debitis tenetur. Et, incidunt aspernatur excepturi, magni totam molestiae asperiores labore accusantium reiciendis quae libero cum nemo hic, suscipit obcaecati. Quibusdam id, aut veniam itaque ipsum ad deserunt culpa necessitatibus perferendis. Ad pariatur natus consequatur suscipit explicabo in maiores quibusdam nisi, repellat, sapiente veniam nihil reprehenderit libero vero quod quasi molestias alias quas, doloribus ullam! Vel doloribus distinctio necessitatibus quasi, nostrum ipsam facere aliquid. Doloribus fugiat dolorum enim debitis. Quo, minima cupiditate doloribus quibusdam itaque distinctio maxime laudantium non ex consequuntur vel, quidem nesciunt, ea magni facere blanditiis illum eos reiciendis? Soluta laudantium ullam voluptas quis dolor incidunt ea deserunt est nostrum, sint ipsam quae sit, qui aperiam modi maiores molestiae illum. Ullam modi quaerat, minus mollitia quasi voluptatem sed laboriosam nulla officiis provident assumenda corporis numquam deleniti dolore quo optio reprehenderit molestiae hic blanditiis maxime. Quidem non harum provident reprehenderit atque ratione odit vel! Atque aperiam laboriosam aliquam iure!</p> -->
 </body>
 </html>
