@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- <link rel="shortcut icon" href="icon bumpsafe.png" type="image/x-icon"> -->
+    <link rel="shortcut icon" href="D:\ML PROJECT 01\FRONT END\templates\icon_bumpsafe-remove.png" type="image/x-icon">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BumpSafe Vision-login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
+    <style>
+      @view-transition{
+        navigation:auto;
+      }
+      body {
+        
+        background-image: linear-gradient(to right, #99C4CA, #E7ACB7);
+      }
+      .full {
+      }
+      .header {
+        display: flex;
+      }
+      .border{
+                justify-content: top;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 0%;
+                margin-left: 38%;
+                height: 37vw;
+                width: 28vw;
+                <!-- height: 20%; -->
+                <!-- width: 25%; -->
+                padding: 0px;
+                border: 2px solid black;
+                border-radius: 15%;
+                box-shadow: 10px 10px 40px;
+                <!-- max-height: 71vh; -->
+      }
+      .inp{
+        height: 35px;
+        width: 300px;
+        color: rgb(132, 0, 255);
+        font-size: 15px;            
+        font-family:'Courier New', Courier, monospace;
+        background: none;
+        border-style:groove;
+        border-radius: 25px;
+        padding: 10px;}
+        input::placeholder{
+            color: black;
+            font-style:bold;
+            font-size: x-large;
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        <!-- <!-- .butft{
+            height: 55px;
+            width: 320px;
+            color: rgb(255, 255, 255);
+            font-size: 25px;            
+            font-family:'Courier New', Courier, monospace;
+            background-color: black;
+            border-style:groove;
+            border-radius: 25px;
+            padding: 10px;
+            margin-left: 5px; -->
+        
+            
+        
+        } -->
+        .container{
+            background: none;
+            
+        }
+        .heading{
+            text-align: center;
+            font-size: x-large;
+        }
+        .low_sec{
+            text-align: left;
+            font-size: x-large;
+            /* display: flex; */
+            margin-left: 10px;
+            margin-bottom: 0%;
+            padding-bottom: 0%;
+    
+        }
+        .googleicon{
+            /* align-items: center; */
+            margin-left: 17%;
+            margin-top: -7%;
+            padding: 0%;
+            justify-content: center;
+        }
+        .ab{
+            text-align: left;
+            font-size: x-large;
+    
+            margin-left: 10px;
+        }
+        .butt{
+            height: 55px;
+            width: 320px;
+            color: rgb(255, 255, 255);
+            font-size: 25px;            
+            font-family:'Courier New', Courier, monospace;
+            background-color: black;
+            border-style:groove;
+            border-radius: 25px;
+            padding: 10px;
+            margin-left: 5px;}
+        .aa{
+            text-align: left;
+            }
+    </style>
+  </head>
+  <body>
+    <div class="full">
+        <!-- this is for the entire page-->
+
+
+      <div class="header">
+        <!--this is for the nav bar section-->
+        <a href="LP_1.html">
+          <img src="D:\ML PROJECT 01\FRONT END\templates\icon_bumpsafe-remove.png" alt="", height="100px", width="100px">
+        </a>
+        <h1 style="padding-left: 20px; font-family: Georgia, serif;">BumpSafe Vision</h1>
+
+      </div>
+        <!-- this section is for the box in which login section is kept -->
+        <div class="border">
+          <div class="heading">
+            <h1><u>Login</u></h1>
+          </div>
+          <br>
+
+          <form>
+            <input
+              class="inp"
+              type="text"
+              placeholder="UserName"
+              style="text-align: center; font-size: x-large">
+              <br><br>
+            <input
+              class="inp"
+              type="password"
+              placeholder="Password"
+              style="text-align: center; font-size: x-large">
+              <br>
+            <div class="ab"><p>Forgot Password?</p></div>
+            <br>
+
+            <a href="LP_1.html"><input class="butt" type="button" value="Login" href="LP_1.html"></a>
+          </form>
+
+          <div class="low_sec">
+                <p>New User? <a href="sign.html">sign up</a></p>
+                <div class="googleicon">
+                  <!-- <img src="google.png" alt="" height="40px",width=40px, "> -->
+                  <!-- <img src="google.png" alt="" height="40px",width=40px, "> -->
+                  <a href="https://www.google.com" style="color: black;"><i class="fa fa-google" style="font-size:36px"></i></a>
+                  <i class="fa fa-github" style="font-size:36px"></i>
+                  <i class="fa fa-linkedin" style="font-size:36px"></i>
+                </div>
+
+
+        </div>
+            
+      
+    </div>
+   
+  </body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="shortcut icon" href="D:\ML PROJECT 01\FRONT END\templates\icon_bumpsafe-remove.png" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BumpSafe Vision</title>
+  <style>
+    body{
+      height: 100%;
+      width: 100%;
+      background-image: url("FLASK\assets\bg_bsv.png");
+      background-size: cover;
+    }
+    
+    .header{
+      display: flex;
+    }
+   
+    .navig{
+      align-content: center ;
+      margin-left: 15vw;
+      border: 2px solid none;
+      border-radius: 50px;
+      border-left-width: .5vw;
+      border-right-width: .5vw;
+      
+      
+      
+    
+    }
+    .log-sign{
+      margin-right: 0%;
+      <!-- display: flex -->
+      align-items:flex-end;
+      
+      
+    }
+    .nav_button{
+      border-radius: 50px;
+      color;
+      
+    }
+    .nav__{
+      border-radius: 50px;
+      margin-top: 5px;
+      margin-left: 0px;
+      margin-inline-start: 110%;
+      background-color: black;
+      color: white;
+      
+    }
+    .nav_center {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;}
+    .nav_right {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-items: right;
+    }
+    
+    .listitem {
+      display: inline;
+      float: left;
+    }
+    .listitems{
+      color: white;
+    }
+    
+    .aa {
+      display: block;
+      padding: 18px;
+      
+      background-color: none;
+      color: black;
+      display: inline;
+      float: left;
+      text-decoration: none;
+      font-size: 1.5vw;
+    }
+    .ab {
+      display: block;
+      padding: 18px;
+      
+      background-color: none;
+      color: white;
+      display: inline;
+      float: left;
+      text-decoration: none;
+      font-size: 1.5vw;
+    }
+    .navig_box{
+      border: #a9b5df;
+    }
+    .main_head{
+      font-size: 70px;
+      text-align: center;
+      padding-top: 10%;
+    }
+    .hero_sec h1 {
+      overflow: hidden; /* Ensures the content is not revealed until the animation */
+      border-right: .15em solid rgb(255, 255, 255); /* The typwriter cursor */
+      white-space: nowrap; /* Keeps the content on a single line */
+      margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+      letter-spacing: 0em; /* Adjust as needed */
+      animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+    }
+    
+    /* The typing effect */
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    
+    /* The typewriter cursor effect */
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: none; }
+    }
+   .sub_cont{
+    border: 2px solid ;
+    background-color: white;
+    opacity: 60%;
+    border-color: black;
+    border-radius: 50px;
+    width: 50vw;
+    height: 6vw;
+    margin-left: 25%;
+    justify-content: center;
+    font-size: x-large;
+    font-weight: bold;
+    font-style: normal;
+    text-decoration:;
+   }
+
+  </style>
+  
+</head>
+<body class="body">
+  <div class="header">
+    <!--this is for the nav bar section-->
+    <a href="/home">
+      <img src="static/img.png" alt="", height="70px", width="70px">
+    </a>
+    <h1 style="padding-left: 20px; font-family: Georgia, serif;">BumpSafe Vision</h1>
+    <div class="navig">
+    <nav class="navig_box">
+      <ul class="nav_center">
+        <button class="nav_button"><li class="listitem" style="background-color: #C1ABBF; border-radius:50px;  border-left-width: .5vw;
+      border-right-width: .5vw;"><a class="aa" href="default.asp"><b><u>Home</u></b></a></li></button>
+        <button class="nav_button"><li class="listitem"><a class="aa" href="news.asp">Services</a></li></button>
+        <button class="nav_button"><li class="listitem"><a class="aa" href="contact.asp">About</a></li></button>
+        <!-- <button class="nav_button"><li class="listitem"><a class="aa" href="about.asp">About</a></li></button> -->
+      </ul>
+    </nav>
+    
+    
+    
+    <!-- <nav class="nav">
+      <a href="/html/">HTML</a> |
+      <a href="/css/">CSS</a> |
+      <a href="/js/">JavaScript</a> |
+      <a href="/python/">Python</a>
+    </nav> -->
+    </div>
+    <div class="log-sign">
+      <ul class="nav_right">
+        <button class="nav__"><li class="listitems"><a class="ab" href="/login">Login</a></li></button>
+        <button class="nav__" style="margin-left: 5%;"><li class="listitems"><a class="ab" href="/signup">SignUp</a></li></button>
+      </ul>
+    </div>
+  </div><hr>
+  <!-- <img src="D:\ML PROJECT 01\FRONT END\templates\gpt bg igm.png" alt=""> -->
+  <div class="hero_sec">
+    <h1 class="main_head" ">SpeedBump Detction <br> <div class="q">Using AI</div></h1>
+   
+  </div><br><br><br>
+  <div class="sub_cont">
+  <center><p style="color:rgb(255, 111, 0);">Experience the future of road safety with our revolutionary ML model.<br> detect road bumps and enhance navigation software with ease</p>
+  </center>
+  </div>
+</body>
+</html>
