@@ -7,7 +7,6 @@
     <style>
         .a{
             border:0px;
-            ;
             border-radius: 50px;
             background-color: rgb(255, 253, 253);
             color: rgb(0, 0, 0);
@@ -16,6 +15,22 @@
             align-content: center;
             text-align: center;
             padding: 100px;
+        }
+        .in_box{
+
+            border:0px;
+            border-radius: 50px;
+            background-color: rgb(255, 0, 106);
+            color: rgb(0, 0, 0);
+            box-shadow: 5px 5px 40px black;
+            height: 10vw;
+            align-content: center;
+            text-align: center;
+            padding: 1px;
+            height: 20vw;
+            width: 15vw;
+            margin: 4px;
+
         }
         .aa{
             margin-top: 5px;
@@ -192,6 +207,21 @@
     animation-name: fadeInDown;
     -webkit-animation-name: fadeInDown;
   }
+  @keyframes appear{
+    from{
+        opacity: 0;
+        scale:0.5;
+    }
+    to{
+        opacity: 1;
+        scale:1;
+    } }
+    .in_box{
+        animation: appear  linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+    
+  }
 /* this is end of fade right to left animation*/
     </style>
 </head>
@@ -219,10 +249,53 @@ Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit nihil sapiente u
     <br><br><br>
     <hr><hr><hr>
     <h1 class="animated animatedFadeInLeft fadeInLeft">hello <br>there I am <br>CHITRANSHU</h1>
-    <br><br><br><hr><hr><hr>
+    <br><br><br>
+    <hr><hr><hr>
     <h1 class="animated animatedFadeInDown fadeInDown">hemloooooo</h1>
     <hr><hr><hr><hr>
     <br><br><br><br>
     <h1 class="animated animatedFadeInRight fadeInRight">right hemlooooo</h1> 
+    <br><br><br><br>
+    <hr><hr><hr><hr>
+
+    <div style="display: ;">
+
+<section style="background-color:aqua">helo
+<div style="color: red; display: flex;">
+    <div class="in_box">
+        <h1>hemlo</h1><br>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque architecto explicabo ut soluta ratione eius culpa vel ab dolorum! Labore ex optio eaque quaerat reiciendis rem quibusdam impedit omnis dignissimos! Et doloremque inventore corrupti perferendis architecto ullam magni. Reprehenderit harum quia, in aut explicabo neque expedita nisi rerum laborum maiores alias maxime praesentium eius culpa eum. Amet iste vitae ipsa quos? Ut optio itaque culpa, aspernatur vero accusamus vel. Sapiente dolorum quia quisquam animi delectus consectetur sunt minus harum vitae error neque fuga expedita quo ducimus maxime non, libero reprehenderit perspiciatis modi. Amet facere, totam animi aliquid facilis possimus! Rerum!
+    </div>
+    <div class="in_box">
+        <h1>hemlo</h1><br>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque architecto explicabo ut soluta ratione eius culpa vel ab dolorum! Labore ex optio eaque quaerat reiciendis rem quibusdam impedit omnis dignissimos! Et doloremque inventore corrupti perferendis architecto ullam magni. Reprehenderit harum quia, in aut explicabo neque expedita nisi rerum laborum maiores alias maxime praesentium eius culpa eum. Amet iste vitae ipsa quos? Ut optio itaque culpa, aspernatur vero accusamus vel. Sapiente dolorum quia quisquam animi delectus consectetur sunt minus harum vitae error neque fuga expedita quo ducimus maxime non, libero reprehenderit perspiciatis modi. Amet facere, totam animi aliquid facilis possimus! Rerum!
+    </div>
+</div>
+</section>
+
+
+
+<section style="color: blue;">hemloo</section>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <div>
+        <div class="con"></div>
+        <div class="con"></div>
+        <div class="con"></div>
+        <div class="con"></div>
+    </div>
+
+    
+
+
 </body>
 </html>

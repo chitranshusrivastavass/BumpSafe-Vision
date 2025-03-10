@@ -64,7 +64,7 @@ def login():
         if user:
             if user.checkpassword(password):
                 session['user'] = user.username
-                return redirect(url_for('dashboard'))
+                return redirect(url_for('/home.html'))#dashboard
         return render_template('login.html', error='Invalid email or password')
     return render_template('login.html')
 

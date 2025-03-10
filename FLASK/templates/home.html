@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BumpSafe Vision</title>
+  
   <style>
     __body{
       height: 100%;
@@ -18,6 +19,7 @@
       margin: 0;
       padding: 0;
       margin-top: 0;
+      <!-- overflow-x: hidden; -->
     }
     
     .header{
@@ -106,15 +108,15 @@
       border: #a9b5df;
     }
     .main_head{
-      font-size: 70px;
+      font-size:90px;
       text-align: center;
-      padding-top: 10%;
+      padding-top: 5%;
     }
     .hero_sec h1 {
       overflow: hidden; /* Ensures the content is not revealed until the animation */
       border-right: .15em solid rgb(255, 255, 255); /* The typwriter cursor */
       white-space: nowrap; /* Keeps the content on a single line */
-      margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+      margin: 0 ; /* Gives that scrolling effect as the typing happens */
       letter-spacing: 0em; /* Adjust as needed */
       animation: 
         typing 3.5s steps(40, end),
@@ -125,13 +127,40 @@
     .hero{
       background-image: url('static/bg_bsv.png'); /* Replace with your image path */
       background-size: cover; /* Cover the entire section */
-      <!-- background-position: center; /* Center the image */ -->
+      background-position: center; /* Center the image */
       background-repeat: no-repeat; /* Prevent image repetition */
       width: 100%;
       height: 100%;
       background-attachment: fixed;
       padding-right: 0%;
       
+    }
+    .get_started{
+      text-align: center;
+      margin-top: 5px;
+      margin-right: 0%;
+      margin-bottom: 50px;
+      margin-left: 30vw;
+      border: 10px solid rgb(255, 111, 0);
+      background-color: rgb(255, 111, 0);
+      border-radius: 50px;
+      width: 20vw;
+      height: 5vw;
+      align-content: center;
+      font-size: x-large;
+      
+    }
+    .learn_more{
+      margin-top: 5px;
+      margin-bottom: 50px;
+      margin-left: 50px;
+      border: 10px solid none;
+      background-color: none;
+      border-radius: 50px;
+      width: 20vw;
+      height: 5vw;
+      align-content: center;
+      font-size: xx-large;
     }
     
     /* The typing effect */
@@ -151,16 +180,52 @@
     border: 2px solid rgb(255, 111, 0) ;
     background-color:   rgba(255, 255, 255, 0.6);
     box-shadow: 5px 5px 40px rgb(255, 111, 0);
-
-    border-radius: 50px;
-    width: 50vw;
-    height: 6vw;
-    margin-left: 25%;
+    margin-right: 0px;
+    border-radius:35px;
+    width: 81vw;
+    height: 10vw;
+    margin-left: 10%;
     justify-content: center;
     font-size: x-large;
-    font-weight: bold;
+    <!-- font-weight: bold; -->
     font-style: normal;
     text-decoration:;
+   }
+   .feature_heading{
+    text-align: center;
+    font-size: 5vw;
+    margin-top: 5%;
+    font-style: bold;
+    margin-bottom: 5%;
+    color: rgb(255, 111, 0);
+    font-family: 'Courier New', Courier, monospace;
+
+   }
+   .feature_container {display: flex;
+  justify-content: center;}
+
+   .feature_box{
+            border:0px;
+            border-radius: 50px;
+            background-color: rgba(255, 111, 0, 0.7);
+            color: rgb(0, 0, 0);
+            box-shadow: 7px 7px 40px black;
+            <!-- height: 10vw; -->
+            align-content: center;
+            text-align: center;
+            padding: 3px;
+            height: 25vw;
+            width: 18vw;
+            margin: ;
+            margin-left: 60px;
+            margin-right: 60px;
+            margin-bottom: 5%;
+            justify-content: center;
+            
+
+   }
+   .feature_box h1{
+    margin-top: 5px;
    }
 
  /*this is for the heading animation in the hero section*/
@@ -324,7 +389,8 @@
 }
 
 .animatedFadeInRight {
-  opacity: 0
+  opacity: 0;
+  
 }
 
 .fadeInRight {
@@ -333,7 +399,25 @@
   -webkit-animation-name: fadeInRight;
 }
 /*this is end of fade in left to right animation*/
+/*this is animation for the feature section*/
 
+@keyframes appear{
+  from{
+      opacity: 0;
+      scale:0.5;
+  }
+  to{
+      opacity: 1;
+      scale:1;
+  } }
+  .feature_box{
+      animation: appear  linear;
+      animation-timeline: view();
+      animation-range: entry 0% cover 40%;
+  
+}
+
+/*this is end of animation for the feature section*/
   </style>
   
 </head>
@@ -382,19 +466,77 @@
   <div class="hero_sec">
     <div class="animated animatedFadeInUp fadeInUp">
     <h1 class="main_head">SpeedBump Detction <br>Using <font style=" color: rgb(255, 111, 0); font-size:100px; text-shadow: 1px 1px 30px rgb(255, 111, 0); ">AI</font> </div>
-   <font style="fon"></font>
-  </div><br><br><br>
+  </div><br><br>
   <div class="animated animatedFadeInUp fadeInUp">
   <div class="sub_cont">
-  <center><p style="color: rgb(255, 111, 0);">Experience the future of road safety with our revolutionary ML model.<br> detect road bumps and enhance navigation software with ease</p>
+  <center><p style="color: black;">Navigate roads with confidence. Our AI-powered system delivers real-time speed breaker detection, ensuring safer journeys. Leveraging advanced computer vision, we accurately pinpoint hazards, providing visual alerts and seamless navigation integration.  Say goodbye to unexpected bumps and hello to smoother, accident-free drives. <br> Join us in building smarter, safer roads for everyone.</p>
   </center></div>
   </div><br><br><br>
-<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-   Ab laborum ut eius dicta tenetur est enim necessitatibus sequi ipsam ipsum totam dolorem dolorum vero repel
-   lendus libero, iure tempore eligendi deserunt numquam doloremque obcaecati ratione dolore! Maxime, corporis quo facere optio sapiente eius hic provident officia impedit eaque illo. Laborum, similique. Quibusdam atque sed cumque eaque sit! Iure esse labore beatae, corrupti alias impedit accusamus eum tempora voluptatem perspiciatis est delectus quos aliquid fuga nihil possimus nobis ipsum quod, incidunt maiores? Commodi similique consequatur tempora et maxime animi, molestias iusto aliquid ut. Optio vitae sit tenetur, quae neque sunt similique atque, vel, explicabo veniam amet iure dolore? Dolor quisquam cum repellendus harum amet ratione corporis vero veniam id delectus quidem quod, perspiciatis fugit in natus? Aliquid iste ipsum est, exercitationem laboriosam voluptatibus maiores ad recusandae accusamus voluptates necessitatibus numquam dicta repellendus ratione ab impedit fugit quas inventore quaerat! Consectetur assumenda natus molestias a, dicta repellendus enim commodi officia laboriosam ipsam, mollitia libero? Animi, illum dolores unde nemo velit expedita inventore, aliquam maxime dolore nobis dicta labore aliquid libero praesentium minus eveniet quos nesciunt sint enim excepturi. Modi nemo, sequi saepe nesciunt accusantium animi suscipit molestiae vero, quisquam, sapiente labore quod quo magnam. Maxime consectetur expedita, ipsa, dignissimos voluptatum natus nihil numquam deleniti animi suscipit deserunt odit, doloremque sed tempora pariatur quam id delectus ratione reprehenderit? Nam magni excepturi, praesentium ipsam facilis quaerat fuga aliquam quam fugit illum minima inventore doloribus ratione doloremque incidunt laudantium sit nemo, dolorem neque vel impedit ipsa tempore. Facere quos, sapiente totam quae sit natus, vero asperiores possimus nesciunt dignissimos provident voluptatem! Tenetur nisi dicta dignissimos beatae assumenda nostrum officia amet magnam mollitia ex laborum, dolores aperiam provident eligendi nam corrupti ea! In similique fugit non. Facilis necessitatibus excepturi delectus molestias optio veritatis sequi dignissimos tempore, ut dolorum vel quibusdam ab voluptatem culpa maxime doloremque dolore laborum illum accusamus voluptas eveniet quisquam vitae nisi beatae. Sunt sapiente quas harum mollitia assumenda atque quidem magni velit inventore. Et eum similique reprehenderit culpa animi obcaecati aspernatur illum quo. Sed molestiae, optio soluta laudantium pariatur nostrum. Maiores quis, dolorum saepe quos qui aspernatur sunt possimus in odit explicabo sapiente voluptas quod ab dicta quia adipisci ex non! Dolores deserunt suscipit, quasi non autem eius alias veritatis accusamus repellat distinctio impedit quisquam unde nemo laboriosam tempore maiores. Ex debitis, quibusdam non natus tempore inventore libero consequuntur nihil suscipit, cum officiis id porro. Error laborum voluptatibus porro quod saepe quaerat eos, nulla in sit deserunt similique alias reiciendis rem aliquam recusandae a mollitia, odio quasi debitis, perferendis voluptatum aliquid hic. Ut animi dicta debitis doloribus, recusandae id quia ea. Consequatur magnam quis eos error, alias praesentium. Ipsum soluta fuga ut, consectetur sunt at quaerat! Deleniti accusamus illo velit iure aut corrupti accusantium dolor, quae et atque eum dolores maiores aspernatur veritatis nostrum ex facilis fugit nesciunt nulla ducimus cumque? Iste, repudiandae provident sapiente aliquam aut exercitationem nulla optio eius pariatur ut tenetur nobis atque perspiciatis explicabo sunt laudantium, porro, sequi voluptatum temporibus! Placeat doloribus iste sequi nam rem a mollitia voluptas non officiis libero provident esse quos laborum nostrum illo porro eum consequatur, ullam enim commodi repudiandae natus aut? Eligendi placeat rem nihil assumenda officiis adipisci qui, sint fugit sed iure accusamus quidem itaque modi est temporibus voluptates debitis corrupti a vitae ab. Quas esse maxime veritatis architecto minus praesentium ullam repudiandae voluptas, itaque adipisci iusto consequatur voluptatem deserunt, ea possimus sapiente dignissimos eius eveniet corporis reprehenderit blanditiis, tempore maiores ratione? Nobis libero reiciendis amet illo omnis qui, provident laborum laudantium accusamus nemo consequatur exercitationem alias, architecto hic praesentium. Dolorem voluptatibus sunt, iure aliquid minus cum neque? Accusantium nobis voluptatem beatae perspiciatis quaerat assumenda nulla, culpa rerum quos, similique, optio facilis cum? Voluptatum, eius laudantium! Quibusdam quis aliquam veniam itaque labore eligendi? Earum nostrum voluptatem tenetur? Necessitatibus quidem quod doloremque dolor nam, repellendus rem reiciendis et temporibus quos distinctio maxime debitis modi ut repellat earum! Provident ullam obcaecati deleniti quibusdam aliquid minima deserunt aspernatur, qui consequuntur optio neque tempore perferendis earum delectus quam cupiditate illum soluta! Nihil pariatur corporis rerum blanditiis, eveniet expedita ea fugiat nesciunt deserunt, inventore velit numquam sint repellat ex hic? Aliquid quam fuga sapiente hic? Perferendis dolores quisquam sit amet iure aliquam, itaque quo, tempora veniam cum dignissimos. Accusantium dolor laudantium voluptate accusamus quibusdam amet est minus sapiente possimus pariatur, vero necessitatibus quia nemo ipsa officiis? Eveniet voluptate officiis corporis aut assumenda! Rerum vero debitis pariatur! Nihil ex rerum sunt dolorum minus laborum ducimus. Dicta sint impedit iure quo! Fuga ducimus facilis, repellat labore repellendus modi, vero maxime, impedit repudiandae quaerat placeat explicabo similique quis ipsum reiciendis debitis ut. Qui nulla iure id autem ullam eum natus repudiandae, animi repellat ex, impedit porro atque odio deleniti aspernatur odit voluptas error perspiciatis asperiores ut? Quos, aperiam nisi quidem enim delectus fuga nihil consectetur hic provident? Dolorem corrupti provident labore dicta, quam harum accusamus ea? Animi, atque quaerat. Voluptas eius nesciunt amet esse hic nam aperiam doloribus temporibus dolores. Rerum, dolores harum? Illo, doloremque ipsum unde nulla illum nihil! Quod quae maiores, vitae ipsa ratione suscipit quidem quis saepe vel eaque tempore! Cupiditate excepturi quasi ex sequi eos nihil, recusandae vitae, tenetur quis ad voluptas non. Tempora mollitia blanditiis molestias sed! Velit, voluptate unde, aliquam ad quaerat id quam iste laboriosam voluptates porro tenetur quos earum facere omnis esse consectetur suscipit exercitationem fugit placeat nostrum inventore sequi rerum! Rem harum illum necessitatibus ex, reiciendis ad labore minima ducimus soluta tenetur, laboriosam autem corrupti, exercitationem iste fugiat illo praesentium? Cupiditate cumque ipsa dolor totam, dicta fuga, accusamus commodi consequatur eligendi sunt ducimus! Asperiores quibusdam suscipit, doloremque sint velit commodi eius qui incidunt ratione dolorum nulla impedit magni corporis esse ad, non magnam nisi nesciunt nihil ullam ex nobis. Magnam consectetur libero omnis quia laudantium commodi dolorum corrupti exercitationem, perferendis ullam cum aut, eveniet illo possimus quod sapiente accusantium nemo sed assumenda. Veniam officia unde praesentium expedita quam incidunt labore autem minus error? Nobis eveniet consequatur fugit a, sunt molestiae culpa esse!
+<div style="display: flex; "><button class="get_started" style="color: white;">Get Started</button>
+<p class="learn_more">learn more ➡️</p>
+</div>
 
-</p>
+<!-- /* now the FEATIRE section starts */ -->
+ <!-- heading for the feature section -->
+  <div class="feature_heading"><u> OUR FEATURES </u></div>
+ <div class="feature_container">
+  <!-- <div class="animated animatedFadeInLeft fadeInLeft"> -->
+  <div class="feature_box">
+    <img src="static/download-01.png" alt="" style="margin-top: 3vw;" height="100px" width="100px">
+    <h1 >Real-time Speed Bumps Detection
+    </h1>
+    <p style="color: white; font-size:20px">Processes image feeds, identifying speed breakers.
+      This  provides immediate warnings to drivers through maps
+    </p>
+
+  </div>
+<!-- </div> -->
+  <!-- <div class="animated animatedFadeInDown fadeInDown"> -->
+  <div class="feature_box">
+    <img src="static/download-01.png" alt="" style="margin-top: 3vw;" height="100px" width="100px">
+
+    <h1> Accurate Localization</h1>
+    <p style="color: white; font-size:20px;">Pinpoint the precise location of speed breakers on the road, ensuring drivers know exactly where the hazard is.
+
+    </p>
+
+  </div>
+<!-- </div> -->
+  
+  <div class="feature_box ">
+    <img src="static/download-01.png" alt="" style="margin-top: 3vw;" height="100px" width="100px">
+
+    <h1>Visual Alerts</h1>
+    <p style="color: white; font-size:20px;">Clear and distinct visual cues are displayed on the driver's screen, highlighting the presence of a speed breaker
+    </p>
+    </div>
+    <br><br></div><div class="feature_container">
+      <!-- <div class="animated animatedFadeInLeft fadeInLeft"> -->
+      <div class="feature_box">
+      <img src="static/download-01.png" alt="" style="margin-top: 3vw;" height="100px" width="100px">
+  
+      <h1> Integration with Navigation Systems</h1>
+      <p style="color: white; font-size:20px;">Seamlessly integrate our speed breaker detection data with existing navigation systems for enhanced road awarenes</p>
+      </div>
+    <!-- </div> -->
+      <!-- <div class=" animatedFadeInRight "> -->
+      <div class="feature_box">
+        <img src="static/download-01.png" alt="" style="margin-top: 3vw;" height="100px" width="100px">
+    
+        <h1>Data Collection for Infrastructure Improvement</h1>
+        <p style="color: white; font-size:20px;">Our system gathers valuable data on speed breaker locations and conditions, providing insights for road authorities</p>
+        </div>
+      <!-- </div> -->
+    
+    </div>
+  </div>
+ </div>
+
+
+
+
+ 
   </section>
-<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum nobis atque quibusdam pariatur numquam ex dolore officia repudiandae autem. Ad hic alias, obcaecati voluptatibus minus consectetur tempore dolorum, aliquid ea ullam quam quo culpa id blanditiis ut commodi ab amet quisquam quidem iusto magni, laborum quas non nihil! Officiis ad porro doloremque nihil, ipsa aliquid ratione eos commodi! Veniam, perferendis laudantium a iste in distinctio hic ea odio libero sapiente quasi suscipit, repellat impedit perspiciatis numquam debitis est aspernatur commodi quisquam. Atque ducimus distinctio omnis totam sed, et natus dolorem enim vel voluptate accusamus dolor aspernatur blanditiis! Beatae alias voluptate deserunt et consequatur inventore distinctio dicta quaerat voluptatum architecto reiciendis perferendis delectus exercitationem, omnis corporis quae eum reprehenderit soluta quos repellendus vitae asperiores sint ipsa? Minus nesciunt repellat asperiores doloremque autem ab nobis possimus aliquam magnam dolore. Quo corporis neque ipsam. Laudantium repellat illo assumenda rem esse debitis saepe placeat! Labore voluptatem nostrum eum, id ipsum numquam dolorum sint nulla pariatur repellat fugit qui, praesentium, itaque porro similique accusamus beatae a unde ipsam quasi rerum. Similique nesciunt voluptatem corporis unde velit quos accusantium vitae provident quas, tempore error quidem eveniet doloribus. Unde, suscipit deserunt repudiandae excepturi, adipisci praesentium architecto qui beatae, dolorem placeat ex? Magni accusamus, dolorum hic eos saepe aspernatur voluptatem incidunt provident expedita pariatur suscipit repellendus tempora ex quo illum labore minus est dignissimos autem omnis sapiente dicta soluta. Saepe voluptatum, accusamus explicabo numquam iusto dolorem atque consectetur aperiam rem, praesentium incidunt corporis totam magnam possimus perferendis consequuntur error enim libero! Magnam, omnis esse nulla non ipsam, natus, deleniti repudiandae repellendus at mollitia temporibus id eius officia odio quo quos ab a! Facere at earum, quia quaerat non voluptates perferendis excepturi harum ratione tenetur veritatis incidunt? Ea quidem quas temporibus nostrum ex at dolores minima rem harum consequatur sint molestiae, incidunt delectus debitis labore, sed facilis dolor eligendi. Praesentium qui dignissimos dolores cum nam velit voluptate. Labore nulla minima reiciendis, itaque fugiat maxime consectetur dolorem asperiores voluptatibus, magni numquam? Mollitia corporis ad hic inventore omnis quod temporibus minus quis, ut labore sapiente nobis dolor iure voluptatibus eum aut debitis tenetur. Et, incidunt aspernatur excepturi, magni totam molestiae asperiores labore accusantium reiciendis quae libero cum nemo hic, suscipit obcaecati. Quibusdam id, aut veniam itaque ipsum ad deserunt culpa necessitatibus perferendis. Ad pariatur natus consequatur suscipit explicabo in maiores quibusdam nisi, repellat, sapiente veniam nihil reprehenderit libero vero quod quasi molestias alias quas, doloribus ullam! Vel doloribus distinctio necessitatibus quasi, nostrum ipsam facere aliquid. Doloribus fugiat dolorum enim debitis. Quo, minima cupiditate doloribus quibusdam itaque distinctio maxime laudantium non ex consequuntur vel, quidem nesciunt, ea magni facere blanditiis illum eos reiciendis? Soluta laudantium ullam voluptas quis dolor incidunt ea deserunt est nostrum, sint ipsam quae sit, qui aperiam modi maiores molestiae illum. Ullam modi quaerat, minus mollitia quasi voluptatem sed laboriosam nulla officiis provident assumenda corporis numquam deleniti dolore quo optio reprehenderit molestiae hic blanditiis maxime. Quidem non harum provident reprehenderit atque ratione odit vel! Atque aperiam laboriosam aliquam iure!</p> -->
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum nobis atque quibusdam pariatur numquam ex dolore officia repudiandae autem. Ad hic alias, obcaecati voluptatibus minus consectetur tempore dolorum, aliquid ea ullam quam quo culpa id blanditiis ut commodi ab amet quisquam quidem iusto magni, laborum quas non nihil! Officiis ad porro doloremque nihil, ipsa aliquid ratione eos commodi! Veniam, perferendis laudantium a iste in distinctio hic ea odio libero sapiente quasi suscipit, repellat impedit perspiciatis numquam debitis est aspernatur commodi quisquam. Atque ducimus distinctio omnis totam sed, et natus dolorem enim vel voluptate accusamus dolor aspernatur blanditiis! Beatae alias voluptate deserunt et consequatur inventore distinctio dicta quaerat voluptatum architecto reiciendis perferendis delectus exercitationem, omnis corporis quae eum reprehenderit soluta quos repellendus vitae asperiores sint ipsa? Minus nesciunt repellat asperiores doloremque autem ab nobis possimus aliquam magnam dolore. Quo corporis neque ipsam. Laudantium repellat illo assumenda rem esse debitis saepe placeat! Labore voluptatem nostrum eum, id ipsum numquam dolorum sint nulla pariatur repellat fugit qui, praesentium, itaque porro similique accusamus beatae a unde ipsam quasi rerum. Similique nesciunt voluptatem corporis unde velit quos accusantium vitae provident quas, tempore error quidem eveniet doloribus. Unde, suscipit deserunt repudiandae excepturi, adipisci praesentium architecto qui beatae, dolorem placeat ex? Magni accusamus, dolorum hic eos saepe aspernatur voluptatem incidunt provident expedita pariatur suscipit repellendus tempora ex quo illum labore minus est dignissimos autem omnis sapiente dicta soluta. Saepe voluptatum, accusamus explicabo numquam iusto dolorem atque consectetur aperiam rem, praesentium incidunt corporis totam magnam possimus perferendis consequuntur error enim libero! Magnam, omnis esse nulla non ipsam, natus, deleniti repudiandae repellendus at mollitia temporibus id eius officia odio quo quos ab a! Facere at earum, quia quaerat non voluptates perferendis excepturi harum ratione tenetur veritatis incidunt? Ea quidem quas temporibus nostrum ex at dolores minima rem harum consequatur sint molestiae, incidunt delectus debitis labore, sed facilis dolor eligendi. Praesentium qui dignissimos dolores cum nam velit voluptate. Labore nulla minima reiciendis, itaque fugiat maxime consectetur dolorem asperiores voluptatibus, magni numquam? Mollitia corporis ad hic inventore omnis quod temporibus minus quis, ut labore sapiente nobis dolor iure voluptatibus eum aut debitis tenetur. Et, incidunt aspernatur excepturi, magni totam molestiae asperiores labore accusantium reiciendis quae libero cum nemo hic, suscipit obcaecati. Quibusdam id, aut veniam itaque ipsum ad deserunt culpa necessitatibus perferendis. Ad pariatur natus consequatur suscipit explicabo in maiores quibusdam nisi, repellat, sapiente veniam nihil reprehenderit libero vero quod quasi molestias alias quas, doloribus ullam! Vel doloribus distinctio necessitatibus quasi, nostrum ipsam facere aliquid. Doloribus fugiat dolorum enim debitis. Quo, minima cupiditate doloribus quibusdam itaque distinctio maxime laudantium non ex consequuntur vel, quidem nesciunt, ea magni facere blanditiis illum eos reiciendis? Soluta laudantium ullam voluptas quis dolor incidunt ea deserunt est nostrum, sint ipsam quae sit, qui aperiam modi maiores molestiae illum. Ullam modi quaerat, minus mollitia quasi voluptatem sed laboriosam nulla officiis provident assumenda corporis numquam deleniti dolore quo optio reprehenderit molestiae hic blanditiis maxime. Quidem non harum provident reprehenderit atque ratione odit vel! Atque aperiam laboriosam aliquam iure!</p>
 </body>
 </html>
