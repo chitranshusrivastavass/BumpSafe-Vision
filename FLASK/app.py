@@ -36,7 +36,7 @@ class SimpleCNN(nn.Module):
 
 # Initialize model and transform
 model = SimpleCNN()
-checkpoint = torch.load('speed_bump_detector.pth', map_location=torch.device('cpu'))
+checkpoint = torch.load(r'C:\Users\rahul\OneDrive\Desktop\BumpSafe-Vision\FLASK\speed_bump_detector.pth', map_location=torch.device('cpu'))
 model.load_state_dict(checkpoint['model_state_dict'])
 model.eval()
 
@@ -99,6 +99,7 @@ def mapinput():
     lat = 26.8467   # default latitude (Lucknow)
     lon = 80.9462   # default longitude
     detection_result = None
+    marker_added = False
 
     if request.method == 'POST':
         try:
@@ -118,12 +119,28 @@ def mapinput():
                 with torch.no_grad():
                     outputs = model(image_tensor)
                     _, predicted = torch.max(outputs.data, 1)
-                    detection_result = "Speed Bump Detected!" if predicted.item() == 1 else "No Speed Bump Detected"
+                    is_speed_bump = predicted.item() == 1
+                    detection_result = "Speed Bump Detected!" if is_speed_bump else "No Speed Bump Detected"
+                    marker_added = is_speed_bump  # Only set marker_added to True if speed bump is detected
 
     # Create the map using Folium
     coords = (lat, lon)
     my_map = folium.Map(location=coords, zoom_start=17)
-    folium.Marker(location=coords, popup="Your Location").add_to(my_map)
+    
+    if marker_added:
+        # Add a custom marker for speed bump detection
+        folium.Marker(
+            location=coords,
+            popup="Speed Bump Detected Here!",
+            icon=folium.Icon(color='red', icon='warning-sign', prefix='fa')  # Using FontAwesome warning icon
+        ).add_to(my_map)
+    else:
+        # Add a default marker if no speed bump detected or no detection performed
+        folium.Marker(
+            location=coords,
+            popup="Location"
+        ).add_to(my_map)
+
     map_html = my_map._repr_html_()
 
     return render_template('mapinput.html', map_html=map_html, 
