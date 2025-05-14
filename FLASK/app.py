@@ -36,7 +36,7 @@ class SimpleCNN(nn.Module):
 
 # Initialize model and transform
 model = SimpleCNN()
-checkpoint = torch.load(r'C:\Users\rahul\OneDrive\Desktop\BumpSafe-Vision\FLASK\speed_bump_detector.pth', map_location=torch.device('cpu'))
+checkpoint = torch.load('speed_bump_detector.pth', map_location=torch.device('cpu'))
 model.load_state_dict(checkpoint['model_state_dict'])
 model.eval()
 
